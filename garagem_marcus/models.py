@@ -5,4 +5,12 @@ class Marca(models.Model):
     nacionalidade = models.CharField(max_length=50,blank=True,null=True)
 
     def __str__(self):
-        return self.nome.upper()                                 
+        return self.nome.upper()
+    
+class Categoria(models.Model):
+    veiculo = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.veiculo
+    
+                                     
