@@ -1,11 +1,7 @@
 from django.contrib import admin
 
 
-from garagem_marcus.models import Marca
-from garagem_marcus.models import Categoria
-from garagem_marcus.models import Core
-from garagem_marcus.models import Acessorio
-from garagem_marcus.models import Veiculo
+from garagem_marcus.models import Marca, Categoria, Core, Acessorio, Veiculo
 
 
 
