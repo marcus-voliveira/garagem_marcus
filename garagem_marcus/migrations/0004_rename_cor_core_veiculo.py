@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RenameModel(
             old_name='Cor',
-            new_name='Core',
+            new_name='Cor',
         ),
         migrations.CreateModel(
             name='Veiculo',
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('ano', models.CharField(default=0, max_length=4, null=True)),
                 ('preco', models.DecimalField(decimal_places=2, default=0, max_digits=10, null=True)),
                 ('categoria', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='Veiculos', to='garagem_marcus.categoria')),
-                ('core', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='Veiculos', to='garagem_marcus.core')),
+                ('cor', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='Veiculos', to='garagem_marcus.cor')),
                 ('marca', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='Veiculos', to='garagem_marcus.marca')),
             ],
         ),
