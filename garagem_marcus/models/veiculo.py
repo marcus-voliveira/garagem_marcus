@@ -1,5 +1,7 @@
 from django.db import models
 
+from garagem_marcus.models import Marca, Categoria, Acessorio, Cor
+
 class Veiculo(models.Model):
     descricao = models.CharField(max_length=50, null=True, blank=True)
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="veiculos")
