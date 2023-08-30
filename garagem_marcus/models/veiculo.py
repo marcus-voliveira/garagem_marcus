@@ -1,4 +1,5 @@
 from django.db import models
+from uploader.models import Image
 
 from garagem_marcus.models import Marca, Categoria, Acessorio, Cor
 
@@ -14,6 +15,15 @@ class Veiculo(models.Model):
         max_digits=10, decimal_places=2, default=0, null=True, blank=True
     )
     acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
+    
+    capa = models.ForeignKey(
+        Image,
+        related_name="+",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        default=None,
+    )
 
     def __str__(self):
         return f"{self.marca} {self.categoria} {self.cor} {self.ano}"    
