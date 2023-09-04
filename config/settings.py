@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "garagem_marcus",
     "usuario",
     "drf_spectacular",
+    "django_extensions",
     
     #"rest_framework_simplejwt",
 ]
