@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     "rest_framework",
     "uploader",
     "garagem_marcus",
-    "usuario", 
-    "rest_framework_simplejwt",
+    "usuario",
+    "drf_spectacular",
+    
+    #"rest_framework_simplejwt",
 ]
 
 # App Uploader settings
@@ -138,11 +140,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated",
+        #"rest_framework.permissions.IsAuthenticated",
     ],
     
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        #"rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
+    
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "garagem_marcus API",
+    "DESCRIPTION": "API para gerenciamento de garagem, incluindo endpoints e documentação.",
+    "VERSION": "1.0.0",
 }
 
