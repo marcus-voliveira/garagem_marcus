@@ -16,10 +16,10 @@ class Veiculo(models.Model):
     )
     acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
     
-    capa = models.ForeignKey(
+    capa = models.ManyToManyField(
         Image,
         related_name="+",
-        on_delete=models.CASCADE,
+        #on_delete=models.CASCADE,
         null=True,
         blank=True,
         default=None,
