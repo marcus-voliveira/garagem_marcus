@@ -1,5 +1,5 @@
 from django.db import models
-from garagem_marcus .models import Cor, Acessorio, Modelo
+from garagem_marcus.models import Cor, Acessorio, Modelo
 from uploader.models import Image
 
 class Veiculo(models.Model):
