@@ -1,11 +1,11 @@
 from django.db import models
 from uploader.models import Image
 
-from garagem_marcus.models import Marca, Categoria, Acessorio, Cor
+from garagem_marcus.models import Categoria, Acessorio, Cor, Modelo
 
 class Veiculo(models.Model):
+    modelo = models.ForeignKey(Modelo, on_delete=models.PROTECT, related_name="veiculos")
     descricao = models.CharField(max_length=50, null=True, blank=True)
-    marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="veiculos")
     categoria = models.ForeignKey(
         Categoria, on_delete=models.PROTECT, related_name="veiculos"
     )
